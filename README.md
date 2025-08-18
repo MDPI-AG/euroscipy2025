@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 In case you don't want to install any dependency locally, you can participate with your browser using Binder. 
 
-[![Open Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MDPI-AG/euroscipy2025.git/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MDPI-AG/euroscipy2025/HEAD?urlpath=%2Fdoc%2Ftree%2Ffamiliarize_plainpython.ipynb)
 
 However, the Binder environment will does not provide a Language Server IDE, so code suggestions will not work for you.
 
