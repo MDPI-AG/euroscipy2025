@@ -2,11 +2,13 @@ FROM python:3.12
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
+ENV USER=${NB_USER}
+ENV NB_UID=${NB_UID}
+ENV HOME=/home/${NB_USER}
+ENV PATH=${HOME}/.local/bin:${PATH}
 
 RUN adduser --disabled-password \
+    --shell /bin/bash \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
@@ -18,4 +20,3 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 WORKDIR ${HOME}
 RUN pip install -r requirements.txt
-ENV PATH=${HOME}/.local/bin:${PATH}
